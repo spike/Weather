@@ -1,4 +1,4 @@
-package com.weather
+package com.weather.forecast
 
 import org.junit.Test
 

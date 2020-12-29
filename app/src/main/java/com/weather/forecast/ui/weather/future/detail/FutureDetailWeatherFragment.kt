@@ -1,4 +1,4 @@
-package com.weather.ui.weather.future.detail
+package com.weather.forecast.ui.weather.future.detail
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.weather.R
+import com.weather.forecast.R
 
 class FutureDetailWeatherFragment : Fragment() {
 
@@ -25,7 +25,7 @@ class FutureDetailWeatherFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FutureDetailWeatherViewModel::class.java)
+      //  viewModel = ViewModelProvider(this).get(FutureDetailWeatherViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
