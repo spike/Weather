@@ -1,4 +1,4 @@
-package com.weather.forecast.ui
+package io.weather.forecast.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import com.weather.forecast.R
+import io.weather.forecast.R
 
 import kotlinx.android.synthetic.main.activity_main.*
 

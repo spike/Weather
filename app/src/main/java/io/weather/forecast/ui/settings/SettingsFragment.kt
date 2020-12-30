@@ -1,4 +1,4 @@
-package com.weather.forecast.ui.settings
+package io.weather.forecast.ui.settings
 
 import androidx.fragment.app.Fragment
 
