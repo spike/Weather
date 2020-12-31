@@ -1,12 +1,18 @@
 package io.weather.forecast.ui.weather.current
 
-import androidx.lifecycle.ViewModelProvider
+import io.weather.forecast.R
+import io.weather.forecast.data.WeatherApiService
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import io.weather.forecast.R
+
+import kotlinx.android.synthetic.main.current_weather_fragment.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class CurrentWeatherFragment : Fragment() {
 
@@ -25,8 +31,14 @@ class CurrentWeatherFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-      //  viewModel = ViewModelProvider(this).get(CurrentWeatherViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(CurrentWeatherViewModel::class.java)
         // TODO: Use the ViewModel
+        val apiService = WeatherApiService()
+
+        GlobalScope.launch(Dispatchers.Main) {
+            val currentWeatherResponse = apiService.getCurrentWeather("London").await()
+            textView.text = currentWeatherResponse.toString()
+        }
     }
 
 }
