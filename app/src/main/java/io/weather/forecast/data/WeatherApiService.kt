@@ -23,6 +23,7 @@ interface WeatherApiService {
         @Query("lang") languageCode: String = "en"
     ): Deferred<CurrentWeatherResponse>
 
+
     companion object {
         operator fun invoke(): WeatherApiService {
             val requestInterceptor = Interceptor { chain ->
