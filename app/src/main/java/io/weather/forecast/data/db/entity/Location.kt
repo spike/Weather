@@ -1,4 +1,4 @@
-package io.weather.forecast.data.db
+package io.weather.forecast.data.db.entity
 
 
 import com.google.gson.annotations.SerializedName
