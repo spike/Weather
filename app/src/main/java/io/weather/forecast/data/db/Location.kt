@@ -1,4 +1,4 @@
-package io.weather.forecast.data.response
+package io.weather.forecast.data.db
 
 
 import com.google.gson.annotations.SerializedName
