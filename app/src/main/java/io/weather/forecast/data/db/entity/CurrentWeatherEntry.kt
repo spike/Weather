@@ -26,10 +26,16 @@ data class CurrentWeatherEntry(
         val visKm: Double,
         @SerializedName("vis_miles")
         val visMiles: Double,
+        @SerializedName("feelslike_f")
+        val feellikeF: Double,
+        @SerializedName("feelslike_c")
+        val feellikeC: Double,
         @SerializedName("wind_kph")
         val windKph: Double,
         @SerializedName("wind_mph")
-        val windMph: Double
+        val windMph: Double,
+        @SerializedName("wind_dir")
+        val windDir: Double
 ) {
     @PrimaryKey(autoGenerate = false)
     var id: Int = CURRENT_WEATHER_ID
