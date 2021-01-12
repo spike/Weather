@@ -80,7 +80,7 @@ dependencies {
     implementation 'com.xwray:groupie-kotlin-android-extensions:2.1.0'
 
     // Preference
-    implementation "androidx.preference:preference:1.0.0"
+    implementation "androidx.preference:preference-ktx:1.0.0"
 
     // WeatherLocation
     implementation "com.google.android.gms:play-services-location:16.0.0"

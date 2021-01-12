@@ -8,17 +8,15 @@ import androidx.room.Query
 import io.weather.forecast.data.db.unitlocalized.ImperialCurrentWeatherEntry
 import io.weather.forecast.data.db.unitlocalized.MetricCurrentWeatherEntry
 
+
 @Dao
 interface CurrentWeatherDao {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun upsert(currentWeather: CurrentWeatherEntry)
+    fun upsert(weatherEntry: CurrentWeatherEntry)
 
-    @Query("SELECT * FROM current_weather WHERE id = $CURRENT_WEATHER_ID")
+    @Query("select * from current_weather where id = $CURRENT_WEATHER_ID")
     fun getWeatherMetric(): LiveData<MetricCurrentWeatherEntry>
 
-    @Query("SELECT * FROM current_weather WHERE id = $CURRENT_WEATHER_ID")
+    @Query("select * from current_weather where id = $CURRENT_WEATHER_ID")
     fun getWeatherImperial(): LiveData<ImperialCurrentWeatherEntry>
-
-
 }
